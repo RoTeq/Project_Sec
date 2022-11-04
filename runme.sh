@@ -1,5 +1,9 @@
 #!/bin/bash
 
+source settings.sh
+
+
+
 function main {
 
         check $@
@@ -21,5 +25,18 @@ function check() {
         done
 }
 
+
+
 main $@
+
+
+
+
+
+
+
+
+
+
+
 exit 0
