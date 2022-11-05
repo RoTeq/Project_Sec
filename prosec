@@ -1,0 +1,14 @@
+#!/bin/bash
+
+function NL() {
+echo ""
+}
+
+RED='\033[0;31m'
+NC='\033[0m'
+
+NL
+echo -e "${RED}invalid command${NC} \"prosec\". Displaying help menu"
+NL
+echo -e "prosec-install: adds a module to the modlue directory"
+NL
