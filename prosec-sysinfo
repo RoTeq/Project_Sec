@@ -1,0 +1,24 @@
+#!/bin/bash
+
+function nl() {
+echo ""
+}
+
+BLUE="\e[34m"
+NC="\e[0m"
+UBLUE="\e[4;34m"
+
+nl
+nl
+echo -e "${UBLUE}Software info${NC}"
+nl
+echo "Distro: $(lsb_release -d | cut -d " " -f 1 | cut -d "	" -f 2)"
+echo "Version: $(lsb_release -d | cut -d " " -f 2)"
+nl
+echo  -e "${UBLUE}CPU info${NC}"
+nl
+echo "Architecture: $(lscpu | grep Arch | cut -d ":" -f 2 | cut -d " " -f 9) "
+echo "Cores: $(lscpu | grep CPU\(s\) | cut -d ":" -f 2 | cut -d " " -f 15 )"
+nl
+
+exit 0

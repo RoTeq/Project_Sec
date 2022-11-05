@@ -1,9 +1,13 @@
 #!/bin/bash
 
+if [ "$EUID" -ne 0 ];then
+    echo "Please run this script as root"
+    exit 1
+fi
+
 function nl() {
 echo ""
 }
-
 
 
 RED='\033[0;31m'
@@ -23,7 +27,9 @@ echo -e "${CYAN}prosec-run${NC}: runs modules in the module directory"
 nl
 echo -e "${CYAN}prosec-list${NC}: lists avalible modules in the directory"
 nl
+echo -e "${CYAN}prosec-sysinfo${NC}: lists system info"
 nl
-echo -e "${YELLOW}\"note* if you wish to get any info use -h on any command for more indepth info\" ${NC}"
+nl
+echo -e "${YELLOW}note* if you wish to get any info use -h on any command for more in depth info ${NC}"
 nl
 nl
