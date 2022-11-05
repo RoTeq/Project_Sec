@@ -5,10 +5,12 @@ echo ""
 }
 
 RED='\033[0;31m'
+YELLOW='\033[0;33m'
 NC='\033[0m'
 
+
 NL
-echo -e "${RED}invalid command${NC} \"prosec\". Displaying help menu"
+echo -e "${RED}invalid command${NC} \"${YELLOW}prosec${NC}\". Displaying help menu"
 NL
 echo -e "prosec-install: adds a module to the modlue directory"
 NL
